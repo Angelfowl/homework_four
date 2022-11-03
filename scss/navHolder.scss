@@ -1,0 +1,105 @@
+.navHolder {
+    width: 100%;
+    height: 50px;
+    background-color: darkcyan;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    
+    .logo {
+        width: 200px;
+        height: 45px;
+        text-align: center;
+        border: 2px solid #000;
+        border-radius: 20px;
+        margin-top: 2px;
+        margin-left: 25px;
+        background-color: beige;
+    }
+
+    .links {
+        height: 50px;
+        width: 80%;
+        overflow: hidden;
+        background-color: darkcyan;
+        margin-left: -10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        transition: height 0.5s, opacity 0.5s ease-in;
+
+        a {
+            width: 75px;
+            height: 30px;
+            background-color: beige;
+            border: 2px solid #000;
+            border-radius: 20px;
+            text-align: center;
+            padding-top: 3px;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: #000;
+        }
+
+        &.active {
+            height: 200px;
+            opacity: 1;
+        }
+    }
+
+    .bars {
+        display: none;
+        margin-right: 10px;
+        // background-color: violet;
+
+        &.active {
+            .bar:nth-child(1){
+                transform: translateY(8px) rotate(45deg);
+            }
+            .bar:nth-child(2){
+                opacity: 0;
+            }
+            .bar:nth-child(3){
+                transform: translateY(-8px) rotate(-45deg);
+            }
+        }
+
+        .bar {
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin: 5px 0;
+            background-color: #000;
+            border-radius: 20px;
+            transition: all 0.3s ease-in-out;
+        }
+
+
+    }
+
+}
+
+@media only screen and (max-width: 960px) {
+    .navHolder {
+        height: 100px;
+
+    
+    .bars {
+        display: block;
+    }
+
+    .logo {
+        height: 75px;
+        margin-top: 10px;
+        padding-top: 12px;
+    }
+
+.links {
+    height: 0;
+    width: 200px;
+    opacity: 0;
+    flex-direction: column;   
+    border: 2px solid #000;
+}
+    }
+}

@@ -1,0 +1,93 @@
+.log-in {
+    width: 100%;
+    min-height: 200px;
+    margin-top: 100px;
+
+    .log-wrapper {
+        width: 960px;
+        min-height: 600px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .left-log {
+            width: 50%;
+            
+                h1 {
+                    width: 250px;
+                    font-size: 30px;
+                    text-align: center;
+                    border-bottom: 2px solid #000;
+                    margin-left: 20px;
+                }
+
+                    .left {
+                        width: 250px;
+                        height: 50px;
+                        padding: 20px;
+                        margin: 20px;
+
+                    }
+
+                    .submit {
+                        width: 150px;
+                        height: 50px;
+                        margin: 20px;
+                        margin-left: 75px;
+                    }
+            }
+
+        .right-log {
+            width: 50%;
+
+            .logIn {
+                width: 100%;
+
+                h1 {
+                    width: 250px;
+                    font-size: 30px;
+                    text-align: center;
+                    border-bottom: 2px solid #000;
+                    margin-left: 120px;
+                }
+
+                    .right {
+                        width: 250px;
+                        height: 50px;
+                        padding: 20px;
+                        margin: 20px;
+                        margin-left: 120px;
+
+                    }
+
+                    .submit {
+                        width: 150px;
+                        height: 50px;
+                        margin: 20px;
+                        margin-left: 175px;
+                    }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 960px){
+    .log-in {
+
+        .log-wrapper {
+            display: block;
+
+            .left-log{
+                width: 400px;
+                margin-left: 20px;
+            }
+
+            .right-log {
+                width: 400px;
+                margin-left: -80px;
+                margin-top: 50px;
+            }
+        }
+    }
+}
